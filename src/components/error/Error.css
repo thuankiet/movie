@@ -1,0 +1,12 @@
+#wrap-error {
+    height: 100vh;
+}
+
+#error-content p {
+    text-align: center;
+}
+
+#error-content #status-code {
+    font-size: 80px;
+    font-weight: 700;
+}

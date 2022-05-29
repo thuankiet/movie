@@ -1,0 +1,69 @@
+.wrap-content {
+    padding-top: 8rem;
+    display: flex;
+    z-index: 10;
+}
+.banner {
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner .overlay {
+    background: black;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.detail-content {
+    color: #ffffff;
+}
+
+.card{
+    border-radius: 50px;
+}
+
+.poster img {
+    height: 500px;
+    width: 320px;
+    margin-right: 40px;
+    border-radius: 30px;
+}
+
+.genres {
+    display: flex;
+    text-align: center;
+}
+
+.genres .genre-item {
+    padding: 10px 20px;
+    background: #000000;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    margin-right: 15px;
+    margin-bottom: 10px;
+} 
+
+.wrap-casts {
+    display: flex;
+    width: 100px;
+}
+
+.wrap-casts .profile-path {
+    height: 160px;
+    width: 100px;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 992px) {
+    .genres {
+        padding-right: 0 !important;
+        justify-content: center;
+        width: 100%;
+    }
+  }
