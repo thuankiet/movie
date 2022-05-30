@@ -1,18 +1,17 @@
-import React from "react";
-
+import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "../pages/Home";
-import Catalog from "../pages/Catalog";
-import Detail from "../pages/detail/Detail";
-
 const RoutesConfig = () => {
+  const Catalog = React.lazy(() => import("../pages/Catalog"));
+  const Home = React.lazy(() => import("../pages/Home"));
+  const Detail = React.lazy(() => import("../pages/detail/Detail"));
   return (
     <Switch>
-      <Route path="/:category/search/:keyword" component={Catalog} />
-      <Route path="/:category/:id" component={Detail} />
-      <Route path="/:category" component={Catalog} />
-      <Route path="/" exact component={Home} />
+      <Suspense fallback={<h1>Loading data....</h1>}>
+        <Route path="/:category/:id" component={Detail} />
+        <Route path="/:movieType" component={Catalog} />
+        <Route path="/" exact component={Home} />
+      </Suspense>
     </Switch>
   );
 };

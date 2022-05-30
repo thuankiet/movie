@@ -6,15 +6,17 @@ import "./Detail.css";
 import CastList from "./CastList";
 import Error from "../../components/error/Error";
 
+const MOVIE = 'movie';
+
 const Detail = (props) => {
-  const { category, id } = useParams();
+  const { id } = useParams();
   const [item, setItem] = useState(null);
   const [errorCode, setErrorCode] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     const getDetail = async () => {
-      const response = await tmdbApi.detail(category, id, { params: {} });
+      const response = await tmdbApi.detail(MOVIE, id, { params: {} });
       setItem(response);
     };
     getDetail().catch(function (e) {
@@ -23,7 +25,7 @@ const Detail = (props) => {
         setErrorMessage(e.response.data.status_message);
       }
     });
-  }, [category, id]);
+  }, [id]);
 
   const getDetailComponent = () => {
     if (errorMessage) {

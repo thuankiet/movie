@@ -1,0 +1,27 @@
+.nav-item {
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+.navbar-toggler {
+    height: 130px;
+    display: flex;
+}
+
+.collapse .active {
+    background: #000000;
+    color: #0d6efd !important;
+}
+
+.nav-item a {
+    color: #ffffff !important;
+}
+

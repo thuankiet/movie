@@ -25,6 +25,7 @@ const MovieList = (props) => {
   }, []);
 
   const getMovieComponent = () => {
+    console.log(1)
     if (errorMessage) {
       return <Error status={errorCode} message={errorMessage} />;
     } else {
