@@ -14,7 +14,7 @@ const Catalog = (props) => {
       setItems(response.results);
     };
     getMovieByType()
-  });
+  }, []);
 
   return (
     <div className="container">
